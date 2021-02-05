@@ -5,7 +5,7 @@
 
     -Otro inconveniente es que la api solo soporta 50 peticiones (hice más de 50),
     de tal manera que el servidor no me permite acceder a los datos y se tiene que
-    esperar ciertos minutos-horas para volver a intentarlo.
+    esperar ciertos minutos-horas para volver a intentarlo, pero usando GitHub se soluciona.
     */
     
     var urlDeezerAlbum = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/192713382'
@@ -14,7 +14,9 @@
     var urlPrueba ='https://randomuser.me/api/'
 
     fetch(urlDeezerAlbum)
+     
     .then(res => res.json(),e =>{
+        //validamos el éxito de la llamada de la api
         if(status != 200){
         console.log("Obtención fallida de deezer",e)
         }else{
@@ -43,27 +45,14 @@
                console.log("Conexion exitosa")
            }
        })
-       .then(data =>{})
-       var seguidoresAdele = document.getElementById("followers")
-       seguidoresAdele.innerHTML = `${data.nb_fan}`
+       .then(data =>{
+        var seguidoresAdele = document.getElementById("followers")
+        seguidoresAdele.innerHTML = `${data.nb_fan}`
+        console.log(data.nb_fan) 
+       })
+
    
         console.log(data)
     })
 
 
-
-//    fetch(urlPrueba)
-//   .then(res => res.json(),e =>{
-//        if(status != 200){
-//        console.log("Obtención fallida de free api user",e)
-//        }else if(status == 200){
-//            console.log("Conexion exitosa")
-//        }
-//    })
-//    .then(data =>{
-//        var id = document.getElementById("nombreArtista").value;
-//           /* var cardContainer = document.getElementById("Imagen");
-//            cardContainer.innerHTML=`<img src="${data.results['0'].picture.medium}" alt="Imagen no encontrada">`
-//*/
-//             console.log(data);
-//    })

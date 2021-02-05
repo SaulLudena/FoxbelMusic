@@ -35,24 +35,23 @@
        //nombreArtista
        var nombreAdele = document.getElementById("artistName")
        nombreAdele.innerHTML = `${data.artist.name}`
-       //cantidadSeguidores
        
-       fetch(urlDeezerArtista)
-       .then(res => res.json(),e =>{
-           if(status != 200){
-           console.log("Obtención fallida de deezer",e)
-           }else{
-               console.log("Conexion exitosa")
-           }
-       })
-       .then(data =>{
-        var seguidoresAdele = document.getElementById("followers")
-        seguidoresAdele.innerHTML = `${data.nb_fan}`
-        console.log(data.nb_fan) 
-       })
-
-   
         console.log(data)
+    })
+           
+    fetch(urlDeezerArtista)
+    .then(res => res.json(),e =>{
+        if(status != 200){
+        console.log("Obtención fallida de deezer",e)
+        }else{
+            console.log("Conexion exitosa")
+        }
+    })
+    .then(data =>{
+     //cantidadSeguidores
+     var seguidoresAdele = document.getElementById("followers")
+     seguidoresAdele.innerHTML = `${data.nb_fan}`
+     console.log(data.nb_fan) 
     })
 
 

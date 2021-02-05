@@ -14,11 +14,10 @@
     var urlPrueba ='https://randomuser.me/api/'
 
     fetch(urlDeezerAlbum)
-     
     .then(res => res.json(),e =>{
         //validamos el éxito de la llamada de la api
         if(status != 200){
-        console.log("Obtención fallida de deezer",e)
+        console.log("Obtención fallida de deezer | primer fetch |",e)
         }else{
             console.log("Conexion exitosa")
         }
@@ -55,3 +54,22 @@
     })
 
 
+//funcion buscar album/track
+    //variables globales
+    var albumArtista = document.getElementById("albumArtista").value
+    console.log(albumArtista)
+    var urlDeezerAlbumPersonalizado = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/{albumArtista}'
+    
+    function buscarAlbum(){
+        fetch(urlDeezerAlbumPersonalizado)
+        .then(res => res.json(),e =>{
+            if(status != 200){
+            console.log("Obtención fallida de deezer",e)
+            }else{
+                console.log("Conexion exitosa")
+            }
+        })
+        .then(data =>{
+                console.log(data)
+        })
+    }

@@ -165,7 +165,7 @@ section .seguir[type=submit]{
     width: 200px;
     min-width: 200px;
     height: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 15px 40px;
     border-radius: 100px;
     background: #9b969600;
@@ -256,8 +256,12 @@ footer .controles button[img]:focus{
 footer .controles img{
     width: 40px;
     height: auto;
+    border-radius: 7px;
+    transition: 0.2s ease-in-out;
 }
-
+footer .controles img:hover{
+    opacity: 40%;
+}
 footer .controlVolumen{
     margin-top:40px;
     margin-right: 90px;

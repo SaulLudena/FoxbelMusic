@@ -64,6 +64,9 @@ section .top{
     justify-content: space-between;
     padding-top: 4vh;
 }
+section .burger{
+    display: none;
+}
 section .formulario{
     display: flex;
 }
@@ -151,10 +154,7 @@ section .reproducir[type=submit]{
     cursor: pointer;
     box-shadow: 5px 5px 15px #771d1d,
                 -5px -5px 15px white;
-    
-
 }
-
 section .seguir[type=submit]{
     width: 200px;
     min-width: 200px;
@@ -185,6 +185,7 @@ section .seguir[type=submit]:hover{
 section .result{
     width: 100%;
     height: auto;
+    padding-bottom: 200px;
 }
 section .result h1:nth-child(1){
     color:#E86060;
@@ -282,8 +283,31 @@ footer input[type=range]::-webkit-slider-thumb {
 
 
 @media screen and (max-width:800px){
-    nav{
-        display: none;
+    nav.responsive{
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        padding-right: 10px;
+        padding-top: 2px;
+    }
+    section{
+        margin-left: 0px;
+    }
+    section .burger{
+        display: block;
+        border: 1px solid #E86060;
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0px;
+    }
+    section .burger .line{
+        width: 15px;
+        color: #E86060;
+        height: 1px;
+        margin:6px ;
+        background-color: #E86060;
     }
     section .card-container{
         width: 100%;
@@ -299,11 +323,18 @@ footer input[type=range]::-webkit-slider-thumb {
     }
 }
 @media screen and (max-width:604px){
+
     footer .controlVolumen{
         margin-right: 0px;
     }
 }
 @media screen and (max-width:517px){
+    nav{
+        position: fixed;
+        width: 900px;
+        height: 100%;
+        padding-right: 10px;
+    }
     section .top{
         display: inline-block;
     }
@@ -316,15 +347,17 @@ footer input[type=range]::-webkit-slider-thumb {
     }
 }
 @media screen and (max-width:470px){
+
     footer .controles{
         text-align: center;
     }
     footer{
         display: block;
-        height: 35% ;
+        height: 28% ;
     }
 }
 @media screen and (max-width:359px){
+
     section .reproducir[type=submit]{
         padding: 15px 10px;
         width: 140px;

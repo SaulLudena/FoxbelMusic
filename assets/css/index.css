@@ -154,6 +154,7 @@ section .reproducir[type=submit]{
     
 
 }
+
 section .seguir[type=submit]{
     width: 200px;
     min-width: 200px;
@@ -300,10 +301,12 @@ footer input[type=range]::-webkit-slider-thumb {
 @media screen and (max-width:604px){
     footer .controlVolumen{
         margin-right: 0px;
-        
     }
 }
 @media screen and (max-width:517px){
+    section .top{
+        display: inline-block;
+    }
     section .card-container{
         display: block;
     }
@@ -311,5 +314,27 @@ footer input[type=range]::-webkit-slider-thumb {
         width: 100%;
         border-radius: 10px 10px 0px 0px;
     }
+}
+@media screen and (max-width:470px){
+    footer .controles{
+        text-align: center;
+    }
+    footer{
+        display: block;
+        height: 35% ;
+    }
+}
+@media screen and (max-width:359px){
+    section .reproducir[type=submit]{
+        padding: 15px 10px;
+        width: 140px;
+        min-width: 140px;
+    }
+    section .seguir[type=submit]{
+        padding: 15px 10px;
+        width: 140px;
+        min-width: 140px;
+    }
 
+        
 }

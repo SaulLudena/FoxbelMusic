@@ -10,8 +10,9 @@
 
 </head>
 <body>
-    <nav>
+    <nav id="nav">
         <img src="assets/img/foxbel-music@3x.png" alt="Imagen no encontrada" width="10%">
+        <div onclick="cerrarNav()" class="cerrar">x</div>
         <h1>Mi Librería</h1>
         <ul class="links">
             <li><a href="">Recientes</a></li>
@@ -29,9 +30,9 @@
             <li><a href="">Baladas</a></li>    
         </ul>
     </nav>
-    <section>
+    <section id="section">
         <div class="top">
-            <form action="miJs.js" method="GET" class="formulario">
+            <form action="/miJs.js" method="GET" class="formulario">
                 <input type="text" id="nombreArtista" name="artista" placeholder="Buscar">
                 <input type="submit" name="submit" class="btn btn-primary" value="Buscar">
             </form>
@@ -39,7 +40,13 @@
                 <img src="assets/img/user.png" alt="Imagen no encontrada">
                 <p>Francisco M.</p>
             </div>
+            <div class="burger" id="burger" onclick="abrirNav()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
+        </div>
+
         <div class="card-container">
             <img src="assets/img/prueba21.jpg" alt="Imagen no encontrada">
              <div class="info-principal">
@@ -89,5 +96,6 @@
             </div>
     </footer>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/topNav.js"></script>
 </body>
 </html>

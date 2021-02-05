@@ -113,7 +113,7 @@ section .data-user img{
 
 section .card-container{
     width: 100%;
-    max-width: 1000%;
+    max-width: 100%;
     height: auto;
     display: flex;
     background: #db55559f;
@@ -122,7 +122,7 @@ section .card-container{
 }
 
 section .card-container img{
-    width: 290px;
+    width: 390px;
     height: auto;
     border-radius: 10px 0px 0px 10px;
 }

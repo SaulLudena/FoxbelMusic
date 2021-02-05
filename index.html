@@ -32,7 +32,7 @@
     </nav>
     <section id="section">
         <div class="top">
-            <form action="/miJs.js" method="GET" class="formulario">
+            <form  method="GET" class="formulario">
                 <input type="text" id="nombreArtista" name="artista" placeholder="Buscar">
                 <input type="submit" name="submit" class="btn btn-primary" value="Buscar">
             </form>
@@ -47,14 +47,17 @@
             </div>
         </div>
 
-        <div class="card-container">
-            <img src="assets/img/prueba21.jpg" alt="Imagen no encontrada">
+        <div class="card-container" id="cardContainer">
+            <div id="Imagen">
+            </div>
              <div class="info-principal">
-                    <h1>Adele 21</h1>
-                    <h4>Lo mejor de Adele</h4>
-                    <p>Lorem  voluptas laudantium ea nelaudantium ea nelaudantium ea nelaudantium ea nelaudantium ea nelaudantium ea 
+                    <h1 id="albumName"></h1>
+                    <h4>Lo mejor de <h4 id="artistName"></h4></h4>
+                    <p>Seguidores: <p id="followers"></p></p>
+                    <p>Lorem m ea naudantium ea nelaudantium ea nelaudantium ea 
                     nelaudantium ea nemo asperiores.</p>
-                    <form action="mijs.js">
+                    
+                    <form method="GET">
                     <input type="submit" name="reproducir" value="Reproducir" class="reproducir">
                     <input type="submit" name="seguir" value="Seguir" class="seguir">
                     </form>

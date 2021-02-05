@@ -41,7 +41,7 @@
     fetch(urlDeezerArtista)
     .then(res => res.json(),e =>{
         if(status != 200){
-        console.log("Obtención fallida de deezer",e)
+        console.log("Obtención fallida de deezer | segundo fetch |",e)
         }else{
             console.log("Conexion exitosa")
         }
@@ -64,12 +64,17 @@
         fetch(urlDeezerAlbumPersonalizado)
         .then(res => res.json(),e =>{
             if(status != 200){
-            console.log("Obtención fallida de deezer",e)
+            console.log("Obtención fallida de deezer | tercer fectch |",e)
             }else{
                 console.log("Conexion exitosa")
             }
         })
         .then(data =>{
-                console.log(data)
+            if(data){
+                console.log(data, 'hay datos')
+            }else{
+                console.log('no hay datos o algo ocurrió')
+            }
+                
         })
     }

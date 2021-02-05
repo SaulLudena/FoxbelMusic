@@ -109,11 +109,13 @@ section .card-container{
     display: flex;
     background: #db55559f;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 section .card-container img{
     width: 290px;
     height: auto;
+    border-radius: 10px 0px 0px 10px;
 }
 section .card-container .info-principal{
     padding:30px;
@@ -131,13 +133,11 @@ section .card-container  p{
     font-weight: lighter;
     margin-top: 10px;
 }
-section form{
-    display: flex;
-}
 section .reproducir[type=submit]{
-    width: 30%;
+    width: 200px;
+    min-width: 200px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 15px 40px;
     border-radius: 100px;
     box-sizing: border-box;
@@ -149,12 +149,16 @@ section .reproducir[type=submit]{
     font-weight: lighter;
     transition: 0.2s ease-in-out;
     cursor: pointer;
+    box-shadow: 5px 5px 15px #771d1d,
+                -5px -5px 15px white;
+    
 
 }
 section .seguir[type=submit]{
-    width: 20%;
+    width: 200px;
+    min-width: 200px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 15px 40px;
     border-radius: 100px;
     background: #9b969600;
@@ -165,7 +169,9 @@ section .seguir[type=submit]{
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
-
+section form{
+    display: inline-block;
+}
 section .reproducir[type=submit]:hover{
     background-color: #ffffff;
     color: #E86060;
@@ -194,7 +200,7 @@ section .artistas{
 section .artistas img{
     width: 200px;
     height: auto;
-
+    border-radius: 5px 5px 0px 0px;
 }
 section .artistas h4{
     margin: 5px 0px;
@@ -216,7 +222,7 @@ footer div:nth-child(2), div:nth-child(3){
 
 footer .infoCancion{
     display: flex;
-    width: 300px;
+    width: 205px;
     height: auto;
     color: white;
     display: flex;
@@ -249,7 +255,7 @@ footer .controlVolumen{
     margin-right: 90px;
 }
 footer input[type=range]{
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    -webkit-appearance: none; 
     height:5px;
     width:100%;
     cursor: pointer;
@@ -265,9 +271,45 @@ footer input[type=range]::-webkit-slider-thumb {
     border-radius: 20px;
     background: #fff;
     cursor: pointer;
-    margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: 0px; 
   }
 
   footer input[type=range]:focus {
     outline: none;
   }
+
+
+
+@media screen and (max-width:800px){
+    nav{
+        display: none;
+    }
+    section .card-container{
+        width: 100%;
+        height: auto;
+    }
+    section .card-container img{
+        width: 170px;
+        height: auto;
+    }
+    footer input[type=range]{
+        float: right;
+        border:1px solid white;
+    }
+}
+@media screen and (max-width:604px){
+    footer .controlVolumen{
+        margin-right: 0px;
+        
+    }
+}
+@media screen and (max-width:517px){
+    section .card-container{
+        display: block;
+    }
+    section .card-container img{
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+}

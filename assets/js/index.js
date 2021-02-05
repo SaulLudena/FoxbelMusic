@@ -50,7 +50,7 @@
      //cantidadSeguidores
      var seguidoresAdele = document.getElementById("followers")
      seguidoresAdele.innerHTML = `${data.nb_fan}`
-     console.log(data.nb_fan) 
+     console.log(data) 
     })
 
 
@@ -58,7 +58,7 @@
     //variables globales
     var albumArtista = document.getElementById("albumArtista").value
     console.log(albumArtista)
-    var urlDeezerAlbumPersonalizado = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/{albumArtista}'
+    var urlDeezerAlbumPersonalizado = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/:albumArtista'
     
     function buscarAlbum(){
         fetch(urlDeezerAlbumPersonalizado)

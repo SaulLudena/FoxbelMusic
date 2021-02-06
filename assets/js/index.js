@@ -1,4 +1,4 @@
-    /*
+      /*
     -Antes de empezar, en la 'urlDeezer' del album de deezer tuve que anteponerle
     una url de heroku para evitar el problema 'access-control-allow-origin' (CORS)
     aún no comprendo al 100% el porqué del problema, pero al menos se solucionó.
@@ -53,19 +53,11 @@
      console.log(data) 
     })
 
-
-//funcion buscar album/track
-    //variables globales
-
-    //var albumArtista = document.getElementById("albumArtista").value
-   
-    //function buscarAlbum(){
-    //console.log(albumArtista)    
-        var albumArtista=92014022
-
-        var urlDeezerAlbumPersonalizado = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/{albumArtista}'
+  
+    var albumArtista=92014022
+    var urlDeezerAlbumPersonalizado = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/{albumArtista}'
         
-        fetch(urlDeezerAlbumPersonalizado)
+    fetch(urlDeezerAlbumPersonalizado)
         .then(res => res.json(),e =>{
             if(status != 200){
             console.log("Obtención fallida de deezer | tercer fetch |",e)
@@ -74,6 +66,5 @@
             }
         })
         .then(data =>{
-                console.log(data)
+                console.log(data.id)
         })
-    //}

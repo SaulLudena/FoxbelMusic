@@ -61,7 +61,7 @@
    
     //function buscarAlbum(){
     //console.log(albumArtista)    
-        var albumArtista=3110429622
+        var albumArtista=92014022
 
         var urlDeezerAlbumPersonalizado = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/{albumArtista}'
         
